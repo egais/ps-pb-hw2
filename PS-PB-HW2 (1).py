@@ -12,7 +12,7 @@ user4 = {'name': 'Анна', 'age': '27', 'account':account4}
 
 # Создаем список словарей для юзера
 
-user_list = [user1, user2, user3, user4]
+user_list = [user1, user2, user3, user4, ]
 
 # Вводим значение ключа и передаем значение ключа на user_key
 #  методом lower() приводим к нижнему регистру
@@ -38,7 +38,8 @@ except TypeError:
     print('Пользователь с указанным номером не найден.')
 
 user_end = input('Введите номер пользователя, которого нужно переместить в конец:')
-new_user = user_list.pop()
-new_user_list = user_list.append(new_user)
-print (new_user_list)
+new_user = user_list.pop(int(user_end)-1)
+print(user_list)
+user_list.append(new_user)
+print(user_list)
 
