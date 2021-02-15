@@ -37,3 +37,8 @@ try:
 except TypeError:
     print('Пользователь с указанным номером не найден.')
 
+user_end = input('Введите номер пользователя, которого нужно переместить в конец:')
+new_user = user_list.pop()
+new_user_list = user_list.append(new_user)
+print (new_user_list)
+
