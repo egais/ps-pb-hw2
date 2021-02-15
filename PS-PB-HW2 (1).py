@@ -36,6 +36,13 @@ try:
     print(f"пароль: {user['account']['password']}")
 except TypeError:
     print('Пользователь с указанным номером не найден.')
+# Высчитываем средний возраст всех юзеров
+age_user1 = 20
+age_user2 = 25
+age_user3 = 18
+age_user4 = 27
+m_age1 = (age_user1 + age_user2 + age_user3 + age_user4) / len(user_list)
+print('Средний возраст пользователей:' + str(m_age1))
 
 user_end = input('Введите номер пользователя, которого нужно переместить в конец:')
 new_user = user_list.pop(int(user_end)-1)
